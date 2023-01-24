@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/*Propriedades Para Criar Retangulo*/
+#Parte4{
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Propriedades Do Retangulo*/
+.Retangulo{
+    width: 80%;
+    height: 80vh;
+    border-radius: 4rem;
+    box-shadow: .1rem .1rem 1rem grey;
+    background-color: wheat;
+    display: flex;
+}
+.RetanguloLadoEsquerdo{
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem 0 0 4rem;
+    
+    /*propriedades para o background funcionar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Propriedades Do Retangulo Lado Esquerdo*/
+.RetanguloLadoEsquerdo .Fundo{
+    width: 100%;
+}
+.RetanguloLadoEsquerdo .Fundo img{
+    width: 100%;
+}
+.RetanguloLadoDireito{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 4rem 4rem 0;
+    background-color: #F1D19A;
+
+    /*propriedades para o titulo e form ficarem divididos*/
+    display: flex;
+    flex-direction: column;
+}
+/*Propriedades Do Retangulo Lado Direito*/
+.SubTituloH2{
+    text-align: start;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.SubTituloH2::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.5rem;
+    background-color: #DC901F;
+    margin: 0rem;
+    position: absolute;
+    border-radius: 10px;
+}
+/*Propriedades do Formulario*/
+.Formulario{
+    width: 100%;
+    height: 100%;
+
+    /*propriedade para o Formulario ficar divido*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Propriedades do Formulario Superior*/
+.FormularioSuperior{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.Metade{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.CaixaLabelInput{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+.CaixaLabelInput input{
+    width: 90%;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: .2rem solid orange;
+    background-color: transparent;
+    transition: .5s ease-in-out;
+}
+.CaixaLabelInput input:hover,.LabelInputBox input:focus {
+    background-color: #FFEFD6;
+    border-bottom: .2rem solid orange;
+    outline: none;
+}
+/*Propriedades do Formulario Inferior*/
+.FormularioInferior{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Inferior{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+.SubTitulo{
+    font-size: 2rem;
+}
+.CaixaDisplayFlex{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*Botoes*/
+.FormatoDaLabel{
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+  
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.FormatoDaLabel:hover{
+    background: #FFEFD6;
+    box-shadow: .1rem .1rem .5rem .01rem lightgray;
+}
+.InputDesabilitado{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+}
+.InputFalso{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+
+    background: linear-gradient(to right bottom , #DC901F, #F5DEB3);;
+    position: relative;
+}
+.InputFalso::before {
+    content: '';
+  
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+  
+    background: whitesmoke;
+    transform: scale(1);
+    transition: .3s;
+}
+.InputDesabilitado:checked+.InputFalso::before {
+    transform: scale(0);
+}
+.Texto{
+    margin-left: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: .3s ease-in;
+}
+.InputDesabilitado:checked~.Texto{
+    color: #FFA500;
+}
+/*Botao de Enviar*/
+.Ultimo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+.btn-hover {
+    width: 50%;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover{
+    background-image: linear-gradient(to right , #DC901F, #F5DEB3, #DC901F);
+    box-shadow: 0 4px 15px 0 #CA955C;
+
+}

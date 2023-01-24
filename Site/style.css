@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Alegreya SC', serif;
+    font-weight: 400; /*Tamanho Padrão*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --BodyBackGroundColor: #D1CBC5; /*UnOficial*/
+    --BackGroundColor:#EBE4DC; /*Oficial*/
+    --BiggerCircleColor: #D8BEA7; /*Oficial*/
+        --FirstButtonColor: #BDD9BE; /*Oficial*/
+        --FirstButtonColorShadow:#859986 ;
+    --LeavesColor: #557570; /*Oficial*/
+    --FontColor: #A5593C; /*Oficial*/
+    --CommercialEColor: #5E5D62; /*Oficial*/
+}
+.Parte{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--BackGroundColor);
+    border-bottom: 1px solid salmon;
+    padding: 3rem;
+
+}
+
+/*Propriedades da Primeira Parte*/
+
+.Primeira{
+    background-image: url(../img/BannerSemFundo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80vmax;
+
+    display: grid;
+    place-items: end center;
+}
+
+.Botao{
+    background-color: var(--FirstButtonColor);
+    width: 24vw;
+    height: 8vh;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    
+    transition:.3s ease-out;
+}
+
+.Botao:hover{
+    box-shadow: 0rem 0rem 1rem var(--FirstButtonColorShadow);
+}
+
+.Whats{
+    font-size: 1.5rem;
+}
+
+/*Propriedades da Segunda Parte*/
+.Segunda{
+    display: grid;
+    grid-template-rows: [StarRow-1]auto [MiddleRow-2]auto [MiddleRow-3]auto [MiddleRow-4]auto [EndRow-5];
+    grid-template-areas: 
+    "Video"
+    "Primeiro"
+    "Segundo"
+    "Terceiro";
+    place-items: center;
+    align-content: space-around;
+}
+
+.Video{
+    grid-area: Video;
+    width: 35rem;
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+.IconeTexto{
+    outline: 1px solid red;
+    width: 60rem;
+    height: 10rem;
+    display: flex;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.Icone{
+    width: 8rem;
+}
+
+.TextoDoIcone{
+    width: 100%;
+    outline: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.PrimeiroIconeTexto{
+    grid-area: Primeiro;
+}
+
+.SegundoIconeTexto{
+    grid-area: Segundo;
+}
+
+.TerceiroIconeTexto{
+    grid-area: Terceiro;
+}
+
+/*Propriedades da Terceira Parte*/
+.Retangulo{
+    background-color: var(--BiggerCircleColor);
+    height: 100%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: [ColumnStart-1]1fr [ColumnMiddle-2]1fr [ColumnEnd-3];
+    grid-template-areas: 
+    "Imagem Formulario";
+}
+.Imagem{
+    grid-area: Imagem;
+
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+.Formulario{
+    grid-area: Formulario;
+    min-height: 0;
+    min-width: 0;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+
+    display: grid;
+    place-items: center;
+    grid-template: [StartRow-1]4fr [MiddleRow-2]1fr [MiddleRow-3]2fr [MiddleRow-4]1fr [EndRow-5]/
+    [StartColumn-1]1fr [MiddleColumn-2]1fr [EndColumn-3];
+    grid-template-areas: 
+    "Esquerda Direita"
+    "Baixa Baixa"
+    "Baixissima Baixissima"
+    "Enviar Enviar";
+}
+
+/*Propriedades da Parte Esquerda do Formulario*/
+.FormParteEsquerda{
+    grid-area: Esquerda;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Rotulo{
+    display: block;
+    text-align: center;
+    
+    min-height: 0;
+    min-width: 0;
+}
+.Caixa{
+    border-radius: 1rem;
+    padding: .5rem .5rem; /*VOLTAR AQUI*/
+    outline: none;
+    font-size: 1.5rem;
+
+    width: 100%;
+
+    min-height: 0;
+    min-width: 0;
+}
+
+/*Propriedades da Parte Direita do Formulario*/
+.FormParteDireita{
+    grid-area: Direita;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*Propriedades da Parte Baixa do Formulario*/
+.FormParteBaixa1{
+    grid-area: Baixa;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template: [RowStart-1]1fr [RowMiddle-2]1fr [RowEnd-3]/
+    [ColumnStart-1]1fr [ColumnMiddle-2]4fr [ColumnMiddle-3]1fr [ColumnMiddle-4]4fr [ColumnEnd-5];
+    grid-template-areas: 
+    "Rotulo Rotulo Rotulo Rotulo"
+    "Radio1 Rotulo1 Radio2 Rotulo2";
+}
+fieldset{
+    border: 0;
+}
+.RotuloBaixo{
+    grid-area: Rotulo;
+
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+input{
+    width: 1.5rem;
+}
+.Radio1{
+    grid-area: Radio1;
+}
+.Rotulo1{
+    grid-area: Rotulo1;
+}
+.Radio2{
+    grid-area: Radio2;
+}
+.Rotulo2{
+    grid-area: Rotulo2;
+}
+
+/*Propriedades da Ultima Parte Baixa do Formulario*/
+.FormParteBaixa2{
+    grid-area: Baixissima;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template: [RowStart-1]1fr [RowMiddle-2]1fr [RowMiddle-3]1fr [RowEnd-4]/
+    [ColumnStart-1]1fr [ColumnMiddle-2]4fr [ColumnMiddle-3]1fr [ColumnMiddle-4]4fr [ColumnEnd-5];
+    grid-template-areas: 
+    "Rotulo Rotulo Rotulo Rotulo"
+    "Radio1 Rotulo1 Radio2 Rotulo2"
+    "Radio3 Rotulo3 Radio4 Rotulo4";
+}
+.Radio3{
+    grid-area: Radio3;
+}
+.Rotulo3{
+    grid-area: Rotulo3;
+}
+.Radio4{
+    grid-area: Radio4;
+}
+.Rotulo4{
+    grid-area: Rotulo4;
+}
+
+/*Propriedades do Botao Abaixo*/
+.Enviar{
+    grid-area: Enviar;
+    font-size: 2rem;
+}
+
+/*Propriedades da Quarta Parte*/
+.Biografia{
+    padding: 1rem;
+}
+.SubTitulo{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+.Paragrafo{
+    font-size: 1.5rem;
+}
+
+/*Propriedades da Quinta Parte*/
+.Container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--FirstButtonColorShadow);
+
+    display: grid;
+    place-items: center;
+    grid-template: [RowStart-1]1fr [RowMiddle-2]1fr [RowMiddle-3]1fr [RowEnd-4]1fr/
+    [ColumnStart-1]1fr [ColumnMiddle-2]1fr [ColumnEnd-3];
+    grid-template-areas: 
+    "Arco Arco"
+    "Q1 Q2"
+    "Q3 Q4";
+}
+.Arco{
+    grid-area: Arco;
+
+    width: 60%;
+    height: 60%;
+    background-color: var(--BodyBackGroundColor);
+}
+.Quadro{
+
+    width: 40%;
+    height: 40%;
+    background-color: var(--FirstButtonColor);
+}
+.Q1{
+    grid-area: Q1;
+}
+.Q2{
+    grid-area: Q2;
+}
+.Q3{
+    grid-area: Q3;
+}
+.Q4{
+    grid-area: Q4;
+}

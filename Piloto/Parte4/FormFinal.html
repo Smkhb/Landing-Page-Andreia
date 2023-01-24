@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FormFinal.css">
+    <title>Form Oficial</title>
+</head>
+<body>
+    <section id="Parte4">
+        <div class="Retangulo">
+            <div class="RetanguloLadoEsquerdo">
+                <div class="Fundo">
+                    <img src="../Oficial/img/Brainstorming_Session _Monochromatic.svg" alt="Conversation">
+                </div>
+            </div>
+            <div class="RetanguloLadoDireito">
+                <div class="SubTituloH2"><h2>Cadastro</h2></div>
+                <form action="#" class="Formulario">
+                    <div class="FormularioSuperior">
+                        
+                        <div class="Metade Esquerda">
+                            <div class="CaixaLabelInput">
+                                <label for="input-name">Nome</label><input type="text" id="input-name" required>  
+                            </div>
+                            <div class="CaixaLabelInput">
+                                <label for="input-date">Data de Nascimento</label><input type="date" name="DataDeNascimento" id="input-date" value="1990-01-01">
+                            </div>
+                            <div class="CaixaLabelInput">
+                                <label for="Cidade">Cidade</label><input type="local" name="Cidade" id="Cidade" >
+                            </div>
+                        </div>
+                        
+                        <div class="Metade Direita">
+                            <div class="CaixaLabelInput">
+                                <label for="input-email">Email</label><input type="email" id="input-email" required>
+                            </div>
+                            <div class="CaixaLabelInput">
+                                <label for="input-phone">Celular</label><input type="tel" name="phone" id="input-phone"pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required>
+                            </div>
+                            <div class="CaixaLabelInput">
+                                <label for="Estado">Estado</label><input type="local" name="Estado" id="Estado">                    
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="FormularioInferior">
+                        <div class="Inferior Primeiro">
+                            <div class="SubTitulo">Gênero</div>
+                            <div class="CaixaDisplayFlex">
+                                <label class="FormatoDaLabel">
+                                    <input type="radio" class="InputDesabilitado" name="Sexo">
+                                    <div class="InputFalso"></div>
+                                    <div class="Texto">Feminino</div>
+                                </label>
+                                <label class="FormatoDaLabel">
+                                    <input type="radio" class="InputDesabilitado" name="Sexo">
+                                    <div class="InputFalso"></div>
+                                    <div class="Texto">Masculino</div>
+                                </label>                            
+                            </div>
+                        </div>
+                        <div class="Inferior Medio">
+                            <div class="SubTitulo">Estado Civil</div>
+                            <div class="CaixaDisplayFlex">
+                                <label class="FormatoDaLabel">
+                                    <input type="radio" class="InputDesabilitado" name="EstadoCivil">
+                                    <div class="InputFalso"></div>
+                                    <div class="Texto">Solteira</div>
+                                </label>
+                                <label class="FormatoDaLabel">
+                                    <input type="radio" class="InputDesabilitado" name="EstadoCivil">
+                                    <div class="InputFalso"></div>
+                                    <div class="Texto">Casada</div>
+                                </label>
+                                <label class="FormatoDaLabel">
+                                    <input type="radio" class="InputDesabilitado" name="EstadoCivil">
+                                    <div class="InputFalso"></div>
+                                    <div class="Texto">Viúva</div>
+                                </label>
+                                <label class="FormatoDaLabel">
+                                    <input type="radio" class="InputDesabilitado" name="EstadoCivil">
+                                    <div class="InputFalso"></div>
+                                    <div class="Texto">Divorciada</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="Inferior Ultimo">
+                            <button type="submit" class="btn-hover">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>   
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>

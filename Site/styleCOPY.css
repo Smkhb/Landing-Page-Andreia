@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Alegreya SC', serif;
+    font-weight: 400; /*Tamanho Padrão*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --BodyBackGroundColor: #D1CBC5; /*UnOficial*/
+    --BackGroundColor:#EBE4DC; /*Oficial*/
+    --BiggerCircleColor: #D8BEA7; /*Oficial*/
+        --FirstButtonColor: #BDD9BE; /*Oficial*/
+        --FirstButtonColorShadow:#859986 ;
+    --LeavesColor: #557570; /*Oficial*/
+    --FontColor: #A5593C; /*Oficial*/
+    --CommercialEColor: #5E5D62; /*Oficial*/
+}
+.Parte{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--BackGroundColor);
+    border-bottom: 1px solid salmon;
+    padding: 3rem;
+
+}
+
+/*Propriedades da Primeira Parte*/
+
+.Primeira{
+    background-image: url(../img/BannerSemFundo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80vmax;
+
+    display: grid;
+    place-items: end center;
+}
+
+.Botao{
+    background-color: var(--FirstButtonColor);
+    width: 24vw;
+    height: 8vh;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    
+    transition:.3s ease-out;
+}
+
+.Botao:hover{
+    box-shadow: 0rem 0rem 1rem var(--FirstButtonColorShadow);
+}
+
+.Whats{
+    font-size: 1.5rem;
+}
+
+/*Propriedades da Segunda Parte*/
+.Segunda{
+    display: grid;
+    grid-template-rows: [StarRow-1]auto [MiddleRow-2]auto [MiddleRow-3]auto [MiddleRow-4]auto [EndRow-5];
+    grid-template-areas: 
+    "Video"
+    "Primeiro"
+    "Segundo"
+    "Terceiro";
+    place-items: center;
+    align-content: space-around;
+}
+
+.Video{
+    grid-area: Video;
+    width: 35rem;
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+.IconeTexto{
+    outline: 1px solid red;
+    width: 60rem;
+    height: 10rem;
+    display: flex;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.Icone{
+    width: 8rem;
+}
+
+.TextoDoIcone{
+    width: 100%;
+    outline: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.PrimeiroIconeTexto{
+    grid-area: Primeiro;
+}
+
+.SegundoIconeTexto{
+    grid-area: Segundo;
+}
+
+.TerceiroIconeTexto{
+    grid-area: Terceiro;
+}
+
+/*Propriedades da Terceira Parte*/
+.Retangulo{
+    background-color: var(--BiggerCircleColor);
+    height: 100%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-columns: [ColumnStart-1]1fr [ColumnMiddle-2]1fr [ColumnEnd-3];
+    grid-template-areas: 
+    "Imagem Formulario";
+}
+.Imagem{
+    grid-area: Imagem;
+
+    height: 100%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+
+    padding: 1rem;
+}
+/*Propriedades do Formulario*/
+.Formulario{
+    grid-area: Formulario;
+
+    height: 100%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+    
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Dados{
+    width: 60%;
+    height: 95%;
+    border: 0rem;
+    padding:1rem 0rem;
+    background-color: var(--LeavesColor);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.RotuloDaCaixaDeTexto{
+    display: block;
+    text-align: center;
+    width: 80%;
+}
+.CaixaDeTexto{
+    outline: none;
+    font-size: 1.5rem;
+    width: 80%;
+    height: 5%;
+    padding: .25rem 1rem;
+
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.RotuloDoConjuntoRadiosRotulos{
+    display: block;
+    text-align: center;
+    width: 80%;
+}
+.ConjuntoRadiosRotulos{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.RadioRotulo{
+    width: 50%;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.RotuloDoRadio{
+    padding: 0rem .5rem;
+}
+.Cadastro{
+    background-color: var(--FirstButtonColor);
+    width: 80%;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    
+    transition:.3s ease-out;
+}
+.Cadastro:hover{
+    box-shadow: 0rem 0rem 1rem var(--FirstButtonColorShadow);
+}
+/*Propriedades da Quarta Parte*/
+.Biografia{
+    padding: 1rem;
+}
+.SubTitulo{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+.Paragrafo{
+    font-size: 1.5rem;
+}
+
+/*Propriedades da Quinta Parte*/
+.Container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--FirstButtonColorShadow);
+
+    display: grid;
+    place-items: center;
+    grid-template: [RowStart-1]1fr [RowMiddle-2]1fr [RowMiddle-3]1fr [RowEnd-4]1fr/
+    [ColumnStart-1]1fr [ColumnMiddle-2]1fr [ColumnEnd-3];
+    grid-template-areas: 
+    "Arco Arco"
+    "Q1 Q2"
+    "Q3 Q4";
+}
+.Arco{
+    grid-area: Arco;
+
+    width: 60%;
+    height: 60%;
+    background-color: var(--BodyBackGroundColor);
+}
+.Quadro{
+
+    width: 40%;
+    height: 40%;
+    background-color: var(--FirstButtonColor);
+}
+.Q1{
+    grid-area: Q1;
+}
+.Q2{
+    grid-area: Q2;
+}
+.Q3{
+    grid-area: Q3;
+}
+.Q4{
+    grid-area: Q4;
+}
